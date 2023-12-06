@@ -1,0 +1,100 @@
+film_id,title,description,release_year,rental_duration,rental_rate,length,replacement_cost,rating,language,category
+656,Papi Necklace,A Fanciful Display of a Car And a Monkey who must Escape a Squirrel in Ancient Japan,2006,3,0.99,128,9.99,PG,English,Travel
+464,Intentions Empire,A Astounding Epistle of a Cat And a Cat who must Conquer a Mad Cow in A U-Boat,2006,3,2.99,107,13.99,PG-13,English,Animation
+507,Ladybugs Armageddon,A Fateful Reflection of a Dog And a Mad Scientist who must Meet a Mad Scientist in New Orleans,2006,4,0.99,113,13.99,NC-17,English,Games
+710,Rage Games,A Fast-Paced Saga of a Astronaut And a Secret Agent who must Escape a Hunter in An Abandoned Amusement Park,2006,4,4.99,120,18.99,R,English,Family
+543,Madigan Dorado,A Astounding Character Study of a A Shark And a A Shark who must Discover a Crocodile in The Outback,2006,5,4.99,116,20.99,R,English,Travel
+487,Jingle Sagebrush,A Epic Character Study of a Feminist And a Student who must Meet a Woman in A Baloon,2006,6,4.99,124,29.99,PG-13,English,Classics
+60,Beast Hunchback,A Awe-Inspiring Epistle of a Student And a Squirrel who must Defeat a Boy in Ancient China,2006,3,4.99,89,22.99,R,English,Classics
+559,Married Go,A Fanciful Story of a Womanizer And a Dog who must Face a Forensic Psychologist in The Sahara Desert,2006,7,2.99,114,22.99,G,English,Sci-Fi
+131,Center Dinosaur,A Beautiful Character Study of a Sumo Wrestler And a Dentist who must Find a Dog in California,2006,5,4.99,152,12.99,PG,English,Classics
+81,Blindness Gun,A Touching Drama of a Robot And a Dentist who must Meet a Hunter in A Jet Boat,2006,6,4.99,103,29.99,PG-13,English,Sci-Fi
+68,Betrayed Rear,A Emotional Character Study of a Boat And a Pioneer who must Find a Explorer in A Shark Tank,2006,5,4.99,122,26.99,NC-17,English,Children
+241,Donnie Alley,A Awe-Inspiring Tale of a Butler And a Frisbee who must Vanquish a Teacher in Ancient Japan,2006,4,0.99,125,20.99,NC-17,English,Animation
+458,Indian Love,A Insightful Saga of a Mad Scientist And a Mad Scientist who must Kill a Astronaut in An Abandoned Fun House,2006,4,0.99,135,26.99,NC-17,English,Family
+888,Thin Sagebrush,A Emotional Drama of a Husband And a Lumberjack who must Build a Cat in Ancient India,2006,5,4.99,53,9.99,PG-13,English,Documentary
+411,Heavenly Gun,A Beautiful Yarn of a Forensic Psychologist And a Frisbee who must Battle a Moose in A Jet Boat,2006,5,4.99,49,13.99,NC-17,English,Music
+204,Dalmations Sweden,A Emotional Epistle of a Moose And a Hunter who must Overcome a Robot in A Manhattan Penthouse,2006,4,0.99,106,25.99,PG,English,Drama
+122,Carrie Bunch,A Amazing Epistle of a Student And a Astronaut who must Discover a Frisbee in The Canadian Rockies,2006,7,0.99,114,11.99,PG,English,Horror
+100,Brooklyn Desert,A Beautiful Drama of a Dentist And a Composer who must Battle a Sumo Wrestler in The First Manned Space Station,2006,7,4.99,161,21.99,R,English,Foreign
+412,Heavyweights Beast,A Unbelieveable Story of a Composer And a Dog who must Overcome a Womanizer in An Abandoned Amusement Park,2006,6,4.99,102,25.99,G,English,Documentary
+514,Lebowski Soldiers,A Beautiful Epistle of a Secret Agent And a Pioneer who must Chase a Astronaut in Ancient China,2006,6,2.99,69,17.99,PG-13,English,Drama
+279,Elizabeth Shane,A Lacklusture Display of a Womanizer And a Dog who must Face a Sumo Wrestler in Ancient Japan,2006,7,4.99,152,11.99,NC-17,English,Sports
+694,Prejudice Oleander,A Epic Saga of a Boy And a Dentist who must Outrace a Madman in A U-Boat,2006,6,4.99,98,15.99,PG-13,English,Classics
+189,Creatures Shakespeare,A Emotional Drama of a Womanizer And a Squirrel who must Vanquish a Crocodile in Ancient India,2006,3,0.99,139,23.99,NC-17,English,Games
+783,Shane Darkness,A Action-Packed Saga of a Moose And a Lumberjack who must Find a Woman in Berlin,2006,5,2.99,93,22.99,PG,English,Travel
+248,Dozen Lion,A Taut Drama of a Cat And a Girl who must Defeat a Frisbee in The Canadian Rockies,2006,6,4.99,177,20.99,NC-17,English,Documentary
+510,Lawless Vision,A Insightful Yarn of a Boy And a Sumo Wrestler who must Outgun a Car in The Outback,2006,6,4.99,181,29.99,G,English,Animation
+631,Novocaine Flight,A Fanciful Display of a Student And a Teacher who must Outgun a Crocodile in Nigeria,2006,4,0.99,64,11.99,G,English,Sports
+611,Musketeers Wait,A Touching Yarn of a Student And a Moose who must Fight a Mad Cow in Australia,2006,7,4.99,73,17.99,PG,English,Classics
+538,Loverboy Attacks,A Boring Story of a Car And a Butler who must Build a Girl in Soviet Georgia,2006,7,0.99,162,19.99,PG-13,English,New
+674,Pet Haunting,A Unbelieveable Reflection of a Explorer And a Boat who must Conquer a Woman in California,2006,3,0.99,99,11.99,PG,English,Foreign
+696,Pride Alamo,A Thoughtful Drama of a A Shark And a Forensic Psychologist who must Vanquish a Student in Ancient India,2006,6,0.99,114,20.99,NC-17,English,Animation
+348,Gandhi Kwai,A Thoughtful Display of a Mad Scientist And a Secret Agent who must Chase a Boat in Berlin,2006,7,0.99,86,9.99,PG-13,English,Family
+95,Breakfast Goldfinger,A Beautiful Reflection of a Student And a Student who must Fight a Moose in Berlin,2006,5,4.99,123,18.99,G,English,New
+441,Hunter Alter,A Emotional Drama of a Mad Cow And a Boat who must Redeem a Secret Agent in A Shark Tank,2006,5,2.99,125,21.99,PG-13,English,Documentary
+349,Gangs Pride,A Taut Character Study of a Woman And a A Shark who must Confront a Frisbee in Berlin,2006,4,2.99,185,27.99,PG-13,English,Animation
+128,Catch Amistad,A Boring Reflection of a Lumberjack And a Feminist who must Discover a Woman in Nigeria,2006,7,0.99,183,10.99,G,English,Foreign
+9,Alabama Devil,A Thoughtful Panorama of a Database Administrator And a Mad Scientist who must Outgun a Mad Scientist in A Jet Boat,2006,3,2.99,114,21.99,PG-13,English,Horror
+704,Pure Runner,A Thoughtful Documentary of a Student And a Madman who must Challenge a Squirrel in A Manhattan Penthouse,2006,3,2.99,121,25.99,NC-17,English,Comedy
+306,Feathers Metal,A Thoughtful Yarn of a Monkey And a Teacher who must Find a Dog in Australia,2006,3,0.99,104,12.99,PG-13,English,Games
+359,Gladiator Westward,A Astounding Reflection of a Squirrel And a Sumo Wrestler who must Sink a Dentist in Ancient Japan,2006,6,4.99,173,20.99,PG,English,Family
+470,Ishtar Rocketeer,A Astounding Saga of a Dog And a Squirrel who must Conquer a Dog in An Abandoned Fun House,2006,4,4.99,79,24.99,R,English,Animation
+750,Run Pacific,A Touching Tale of a Cat And a Pastry Chef who must Conquer a Pastry Chef in A MySQL Convention,2006,3,0.99,145,25.99,R,English,New
+129,Cause Date,A Taut Tale of a Explorer And a Pastry Chef who must Conquer a Hunter in A MySQL Convention,2006,3,2.99,179,16.99,R,English,Documentary
+515,Legally Secretary,A Astounding Tale of a A Shark And a Moose who must Meet a Womanizer in The Sahara Desert,2006,7,4.99,113,14.99,PG,English,Children
+808,Sling Luke,A Intrepid Character Study of a Robot And a Monkey who must Reach a Secret Agent in An Abandoned Amusement Park,2006,5,0.99,84,10.99,R,English,Classics
+792,Shrek License,A Fateful Yarn of a Secret Agent And a Feminist who must Find a Feminist in A Jet Boat,2006,7,2.99,154,15.99,PG-13,English,Foreign
+191,Crooked Frogmen,A Unbelieveable Drama of a Hunter And a Database Administrator who must Battle a Crocodile in An Abandoned Amusement Park,2006,6,0.99,143,27.99,PG-13,English,Children
+619,Neighbors Charade,A Fanciful Reflection of a Crocodile And a Astronaut who must Outrace a Feminist in An Abandoned Amusement Park,2006,3,0.99,161,20.99,R,English,Sports
+697,Primary Glass,A Fateful Documentary of a Pastry Chef And a Butler who must Build a Dog in The Canadian Rockies,2006,7,0.99,53,16.99,G,English,Action
+898,Tourist Pelican,A Boring Story of a Butler And a Astronaut who must Outrace a Pioneer in Australia,2006,4,4.99,152,18.99,PG-13,English,Sports
+756,Saddle Antitrust,A Stunning Epistle of a Feminist And a A Shark who must Battle a Woman in An Abandoned Fun House,2006,7,2.99,80,10.99,PG-13,English,Comedy
+398,Hanover Galaxy,A Stunning Reflection of a Girl And a Secret Agent who must Succumb a Boy in A MySQL Convention,2006,5,4.99,47,21.99,NC-17,English,Music
+415,High Encino,A Fateful Saga of a Waitress And a Hunter who must Outrace a Sumo Wrestler in Australia,2006,3,2.99,84,23.99,R,English,Horror
+184,Core Suit,A Unbelieveable Tale of a Car And a Explorer who must Confront a Boat in A Manhattan Penthouse,2006,3,2.99,92,24.99,PG-13,English,Classics
+207,Dangerous Uptown,A Unbelieveable Story of a Mad Scientist And a Woman who must Overcome a Dog in California,2006,7,4.99,121,26.99,PG,English,Foreign
+916,Turn Star,A Stunning Tale of a Man And a Monkey who must Chase a Student in New Orleans,2006,3,2.99,80,10.99,G,English,Animation
+630,Notting Speakeasy,A Thoughtful Display of a Butler And a Womanizer who must Find a Waitress in The Canadian Rockies,2006,7,0.99,48,19.99,PG-13,English,Drama
+219,Deep Crusade,A Amazing Tale of a Crocodile And a Squirrel who must Discover a Composer in Australia,2006,6,4.99,51,20.99,PG-13,English,Documentary
+730,Ridgemont Submarine,A Unbelieveable Drama of a Waitress And a Composer who must Sink a Mad Cow in Ancient Japan,2006,3,0.99,46,28.99,PG-13,English,New
+939,Vertigo Northwest,A Unbelieveable Display of a Mad Scientist And a Mad Scientist who must Outgun a Mad Cow in Ancient Japan,2006,4,2.99,90,17.99,R,English,Comedy
+828,Spiking Element,A Lacklusture Epistle of a Dentist And a Technical Writer who must Find a Dog in A Monastery,2006,7,2.99,79,12.99,G,English,Classics
+6,Agent Truman,A Intrepid Panorama of a Robot And a Boy who must Escape a Sumo Wrestler in Ancient China,2006,3,2.99,169,17.99,PG,English,Foreign
+555,Mallrats United,A Thrilling Yarn of a Waitress And a Dentist who must Find a Hunter in A Monastery,2006,4,0.99,133,25.99,PG,English,Comedy
+269,Earring Instinct,A Stunning Character Study of a Dentist And a Mad Cow who must Find a Teacher in Nigeria,2006,3,0.99,98,22.99,R,English,Family
+602,Mourning Purple,A Lacklusture Display of a Waitress And a Lumberjack who must Chase a Pioneer in New Orleans,2006,5,0.99,146,14.99,PG,English,Sci-Fi
+419,Hocus Frida,A Awe-Inspiring Tale of a Girl And a Madman who must Outgun a Student in A Shark Tank,2006,4,2.99,141,19.99,G,English,Family
+305,Fatal Haunted,A Beautiful Drama of a Student And a Secret Agent who must Confront a Dentist in Ancient Japan,2006,6,2.99,91,24.99,PG,English,New
+687,Pocus Pulp,A Intrepid Yarn of a Frisbee And a Dog who must Build a Astronaut in A Baloon Factory,2006,6,0.99,138,15.99,NC-17,English,Documentary
+665,Patton Interview,A Thrilling Documentary of a Composer And a Secret Agent who must Succumb a Cat in Berlin,2006,4,2.99,175,22.99,PG,English,Horror
+84,Boiled Dares,A Awe-Inspiring Story of a Waitress And a Dog who must Discover a Dentist in Ancient Japan,2006,7,4.99,102,13.99,PG,English,Travel
+552,Majestic Floats,A Thrilling Character Study of a Moose And a Student who must Escape a Butler in The First Manned Space Station,2006,5,0.99,130,15.99,PG,English,Documentary
+89,Borrowers Bedazzled,A Brilliant Epistle of a Teacher And a Sumo Wrestler who must Defeat a Man in An Abandoned Fun House,2006,7,0.99,63,22.99,G,English,Animation
+700,Prix Undefeated,A Stunning Saga of a Mad Scientist And a Boat who must Overcome a Dentist in Ancient China,2006,4,2.99,115,13.99,R,English,Family
+844,Steers Armageddon,A Stunning Character Study of a Car And a Girl who must Succumb a Car in A MySQL Convention,2006,6,4.99,140,16.99,PG,English,Sports
+803,Slacker Liaisons,A Fast-Paced Tale of a A Shark And a Student who must Meet a Crocodile in Ancient China,2006,7,4.99,179,29.99,R,English,Drama
+831,Spirited Casualties,A Taut Story of a Waitress And a Man who must Face a Car in A Baloon Factory,2006,5,0.99,138,20.99,PG-13,English,Sci-Fi
+47,Baby Hall,A Boring Character Study of a A Shark And a Girl who must Outrace a Feminist in An Abandoned Mine Shaft,2006,5,4.99,153,23.99,NC-17,English,Foreign
+768,Scarface Bang,A Emotional Yarn of a Teacher And a Girl who must Find a Teacher in A Baloon Factory,2006,3,4.99,102,11.99,PG-13,English,Children
+342,Fugitive Maguire,A Taut Epistle of a Feminist And a Sumo Wrestler who must Battle a Crocodile in Australia,2006,7,4.99,83,28.99,R,English,Travel
+410,Heaven Freedom,A Intrepid Story of a Butler And a Car who must Vanquish a Man in New Orleans,2006,7,2.99,48,19.99,PG,English,Comedy
+856,Streetcar Intentions,A Insightful Character Study of a Waitress And a Crocodile who must Sink a Waitress in The Gulf of Mexico,2006,5,4.99,73,11.99,R,English,Horror
+374,Graffiti Love,A Unbelieveable Epistle of a Sumo Wrestler And a Hunter who must Build a Composer in Berlin,2006,3,0.99,117,29.99,PG,English,Sci-Fi
+72,Bill Others,A Stunning Saga of a Mad Scientist And a Forensic Psychologist who must Challenge a Squirrel in A MySQL Convention,2006,6,2.99,93,12.99,PG,English,Documentary
+643,Orient Closer,A Astounding Epistle of a Technical Writer And a Teacher who must Fight a Squirrel in The Sahara Desert,2006,3,2.99,118,22.99,R,English,Drama
+924,Unforgiven Zoolander,A Taut Epistle of a Monkey And a Sumo Wrestler who must Vanquish a A Shark in A Baloon Factory,2006,7,0.99,129,15.99,PG,English,Sci-Fi
+709,Racer Egg,A Emotional Display of a Monkey And a Waitress who must Reach a Secret Agent in California,2006,7,2.99,147,19.99,NC-17,English,Drama
+249,Dracula Crystal,A Thrilling Reflection of a Feminist And a Cat who must Find a Frisbee in An Abandoned Fun House,2006,7,0.99,176,26.99,G,English,Classics
+500,Kiss Glory,A Lacklusture Reflection of a Girl And a Husband who must Find a Robot in The Canadian Rockies,2006,5,4.99,163,11.99,PG-13,English,Foreign
+805,Sleepless Monsoon,A Amazing Saga of a Moose And a Pastry Chef who must Escape a Butler in Australia,2006,5,4.99,64,12.99,G,English,Animation
+444,Hustler Party,A Emotional Reflection of a Sumo Wrestler And a Monkey who must Conquer a Robot in The Sahara Desert,2006,3,4.99,83,22.99,NC-17,English,Comedy
+615,Nash Chocolat,A Epic Reflection of a Monkey And a Mad Cow who must Kill a Forensic Psychologist in An Abandoned Mine Shaft,2006,6,2.99,180,21.99,PG-13,English,Animation
+771,Scorpion Apollo,A Awe-Inspiring Documentary of a Technical Writer And a Husband who must Meet a Monkey in An Abandoned Fun House,2006,3,4.99,137,23.99,NC-17,English,Drama
+563,Massacre Usual,A Fateful Reflection of a Waitress And a Crocodile who must Challenge a Forensic Psychologist in California,2006,6,4.99,165,16.99,R,English,Games
+958,Wardrobe Phantom,A Action-Packed Display of a Mad Cow And a Astronaut who must Kill a Car in Ancient India,2006,6,2.99,178,19.99,G,English,Drama
+439,Hunchback Impossible,A Touching Yarn of a Frisbee And a Dentist who must Fight a Composer in Ancient Japan,2006,4,4.99,151,28.99,PG-13,English,Drama
+377,Grease Youth,A Emotional Panorama of a Secret Agent And a Waitress who must Escape a Composer in Soviet Georgia,2006,7,0.99,135,20.99,G,English,Family
+310,Fever Empire,A Insightful Panorama of a Cat And a Boat who must Defeat a Boat in The Gulf of Mexico,2006,5,4.99,158,20.99,R,English,Games
+494,Karate Moon,A Astounding Yarn of a Womanizer And a Dog who must Reach a Waitress in A MySQL Convention,2006,4,0.99,120,21.99,PG-13,English,Horror
+644,Oscar Gold,A Insightful Tale of a Database Administrator And a Dog who must Face a Madman in Soviet Georgia,2006,7,2.99,115,29.99,PG,English,Animation
