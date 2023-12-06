@@ -23,14 +23,34 @@ def load(job_timestamp):
     
     # Load transformed data
     prefix_file_path = f'./transformed_data/{job_timestamp}'
-    #dim_customer = spark.read.csv(f'{prefix_file_path}/dim_customer', header=True, inferSchema=True)
-    #dim_film = spark.read.csv(path=f'{prefix_file_path}/dim_film ', header=True, inferSchema=True)
-    dim_store = spark.read.csv(path=f'{prefix_file_path}/dim_store', header=True, inferSchema=True)
-    #dim_date = spark.read.csv(path=f'{prefix_file_path}/dim_date ', header=True, inferSchema=True)
-    #fact_sale = spark.read.csv(path=f'{prefix_file_path}/fact_sales', header=True, inferSchema=True)
 
+    dim_customer = spark.read.csv(f'{prefix_file_path}/dim_customer',
+                                header=True,
+                                schema='customer_id int, first_name string, last_name string, active int, address string, district string, city string, country string')
+
+    dim_film = spark.read.csv(path=f'{prefix_file_path}/dim_film',
+                            header=True,
+                            schema='film_id int, title string, description string, release_year int, rental_duration int, rental_rate float, length int, replacement_cost float, rating string, language string, category string')
+
+    dim_store = spark.read.csv(path=f'{prefix_file_path}/dim_store',
+                            header=True,
+                            schema='store_id int, address string, district string, postal_code int, city string, country string')
+
+    dim_date = spark.read.csv(path=f'{prefix_file_path}/dim_date',
+                            header=True,
+                            schema='date timestamp, datekey int, year int, month int, day int, quarter int, dayofweek int')
+
+    fact_sale = spark.read.csv(path=f'{prefix_file_path}/fact_sales',
+                            header=True,
+                            schema='payment_id int, customer_id int, film_id int, store_id int, payment_date timestamp, sale_amount float, rental_date timestamp, return_date timestamp')
+
+    
     no_partitions = 4
+    dim_customer.repartition(no_partitions)
+    dim_film.repartition(no_partitions)
     dim_store.repartition(no_partitions)
+    dim_date.repartition(no_partitions)
+    fact_sale.repartition(no_partitions)
 
     # Posgres read and write functions for each table
     # Transaction isolation level is serializable
@@ -69,19 +89,34 @@ def load(job_timestamp):
         Function for filtering out existing rows in the dimension tables before updating the data.
         """
         
-        # Load unique identifiers already in the destination database
+        # Read table
         print(f'Reading {table}')
         existing_table = read_db(table)
-        # Filter out entries from dimension tables that are already there
-        existing_ids = existing_table.select(idx_col).collect()
-        non_existing_rows = df.filter(~df[idx_col].isin(existing_ids))
-        # Load data into table
+        
+        # Filter out existing ids
+        print(f'Filtering rows from {table}')
+        non_existing_rows = df.join(existing_table, [idx_col, idx_col], "leftanti")
+        #existing_ids = existing_table.select(idx_col).collect()
+        #print(existing_ids)
+        #non_existing_rows = df.filter(~df[idx_col].isin(existing_ids))
+        
+        # Load rows with ids not present in the database
         print(f'Loading {table}')
         write_df(non_existing_rows, table, partitions)
         
         print(f'Load for {table} done')
+        
+    def load_fact_df(df, table, partitions):
+        print(f'Loading {table}')
+        write_df(df, table, partitions)
+        print(f'Load for {table} done')
     ###############################################################################################################
+    # no_partitions from before
+    filter_load_dim_df(dim_customer, 'dim_customer', no_partitions, 'customer_id')
+    filter_load_dim_df(dim_film, 'dim_film', no_partitions, 'film_id')
     filter_load_dim_df(dim_store, 'dim_store', no_partitions, 'store_id')
+    filter_load_dim_df(dim_date, 'dim_date', no_partitions, 'datekey')
+    load_fact_df(fact_sale, 'fact_sale', no_partitions)
 
 if __name__ == '__main__':
 	from datetime import datetime
