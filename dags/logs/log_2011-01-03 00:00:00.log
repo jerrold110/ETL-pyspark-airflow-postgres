@@ -1,0 +1,23 @@
+ERROR:root:Retrieving address.dat from S3
+ERROR:root:Retrieving category.dat from S3
+ERROR:root:Retrieving city.dat from S3
+ERROR:root:Retrieving country.dat from S3
+ERROR:root:Retrieving customer.dat from S3
+ERROR:root:Retrieving film.dat from S3
+ERROR:root:Retrieving film_category.dat from S3
+ERROR:root:Retrieving inventory.dat from S3
+ERROR:root:Retrieving language.dat from S3
+ERROR:root:Retrieving payment.dat from S3
+ERROR:root:Retrieving rental.dat from S3
+ERROR:root:Retrieving staff.dat from S3
+ERROR:root:Retrieving store.dat from S3
+ERROR:root:Successfully created dim_customer dataframe
+ERROR:root:Successfully created dim_film dataframe
+ERROR:root:Successfully created dim_store dataframe
+ERROR:root:Successfully created dim_date dataframe
+ERROR:root:Successfully created fact_sale dataframe
+ERROR:root:Writing dataframe to dim_customer table
+ERROR:root:Writing dataframe to dim_film table
+ERROR:root:Writing dataframe to dim_store table
+ERROR:root:Writing dataframe to dim_date table
+ERROR:root:Writing dataframe to fact_sale table
