@@ -1,5 +1,4 @@
-import os
-os.chdir("/home/me/airflow/dags")
+import logging
 
 from datetime import datetime, timedelta
 from airflow import DAG
@@ -8,9 +7,9 @@ from airflow.operators.python import PythonOperator
 from airflow.sensors.filesystem import FileSensor
 #from airflow.contrib.sensors.file_sensor import FileSensor
 
-# import ETL scripts 
 from scripts.s3_extract import extract
-from scripts.spark_transform_load import transform_load
+from scripts.transform import transform
+from scripts.load import load
 
 default_arguments = {
         "depends_on_past": False,
@@ -37,11 +36,11 @@ default_arguments = {
 from datetime import datetime
 job_timestamp = datetime.now().replace(microsecond=0)
 job_timestamp = datetime(2023, 11, 30, 0, 0,0)
-print(f'extracted_data/{job_timestamp}/Customers.csv')
-#print('extracted_data/2023-11-30 00:00:00/Customers.csv')
-	
+
+logging.basicConfig(filename='./logs/log_{job_timestamp}.log', encoding='utf-8', level=logging.WARNING)
+
 with DAG(
-    dag_id="Etl_test_1",
+    dag_id="an_etl",
     # These args will get passed on to each operator
     # You can override them on a per-task basis during operator initialization
     default_args=default_arguments,
@@ -50,39 +49,27 @@ with DAG(
     start_date=datetime(2021, 1, 1),
     catchup=False,
     tags=["example"]
-	) as dag:
+    ) as dag:
 
-	t1 = PythonOperator(
-		task_id='extract',
-		python_callable=extract,
-		sla=timedelta(hours=1),
-		op_kwargs={'job_timestamp':job_timestamp}
-		)
-         
-	fs1 = FileSensor(
-		task_id="check_file_1",
-		fs_conn_id='my_path_1',
-		filepath=f'extracted_data/{job_timestamp}/Customers.csv',
-		poke_interval=1,
-		timeout=5,
-		mede='poke'
-		)
-		
-	fs2 = FileSensor(
-		task_id="check_file_1",
-		fs_conn_id='my_path_1',
-		filepath=f'extracted_data/{job_timestamp}/Shipments.csv',
-		poke_interval=1,
-		timeout=5,
-		mede='poke'
-		)
-		
-		
-	t2 = PythonOperator(
-		task_id='transform_load',
-		python_callable=transform_load,
-		sla=timedelta(hours=1),
-		op_kwargs={'job_timestamp':job_timestamp}
-		)
+    t1 = PythonOperator(
+    task_id='s3_extract',
+    python_callable=extract,
+    sla=timedelta(hours=1),
+    op_kwargs={'job_timestamp':job_timestamp}
+    )
 
-	t1 >> t2
+    t2 = PythonOperator(
+    task_id='transform',
+    python_callable=transform,
+    sla=timedelta(hours=1),
+    op_kwargs={'job_timestamp':job_timestamp}
+    )
+
+    t3 = PythonOperator(
+    task_id='load',
+    python_callable=transform,
+    sla=timedelta(hours=1),
+    op_kwargs={'job_timestamp':job_timestamp}
+    )
+
+    t1 >> t2 >> t3
