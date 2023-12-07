@@ -1,11 +1,14 @@
-import boto3
-import os
 
 def extract(job_timestamp):
 	"""
 	Extraction job. Ensure that Aws cli configuration with IAM is already done to resolve authentication issues
 	"""
-	print('Extraction starting')
+	import os
+	import logging
+	import boto3
+	import botocore
+
+	print('Extract starting')
 	# Create the destination folder
 	isExist = os.path.exists(f'./extracted_data/{job_timestamp}')
 	if not isExist:
@@ -22,7 +25,13 @@ def extract(job_timestamp):
 			'language.dat','payment.dat','rental.dat','staff.dat','store.dat']
 	
 	for o in objects:
-		download(o)
+		try:
+			logging.error(f'Retrieving {o} from S3')
+			download(o)
+		except botocore.exceptions.ClientError as e:
+			logging.error(f'Error while retrieving {o} from S3 {e}')
+		except Exception as e:
+			logging.error(f'Error while retrieving {o} from S3 {e}')
 
 	print('Extract operation complete')
 

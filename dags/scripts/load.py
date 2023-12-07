@@ -16,6 +16,8 @@ def load(job_timestamp):
     Persisting the data allows for parallel and distributed processing. Other Spark or non-Spark applications can read the data concurrently, and you can take advantage of distributed storage systems for improved performance.
         """
     print('Load starting')
+    import logging
+    import py4j
     from pyspark.sql import SparkSession
     spark = SparkSession.builder.master("local[*]") \
                         .appName('Data ETL') \
@@ -40,7 +42,7 @@ def load(job_timestamp):
                             header=True,
                             schema='date timestamp, datekey int, year int, month int, day int, quarter int, dayofweek int')
 
-    fact_sale = spark.read.csv(path=f'{prefix_file_path}/fact_sales',
+    fact_sale = spark.read.csv(path=f'{prefix_file_path}/fact_sale',
                             header=True,
                             schema='payment_id int, customer_id int, film_id int, store_id int, payment_date timestamp, sale_amount float, rental_date timestamp, return_date timestamp')
 
@@ -82,28 +84,29 @@ def load(job_timestamp):
             "numPartitions": str(partitions), # equal to or lesser than the no. partitions of the DF
             "isolationLevel": "SERIALIZABLE"
         }
-        df.write.jdbc(url=postgres_url, table=table, mode="append", properties=properties)
+        try:
+            logging.error(f'Writing dataframe to {table} table')
+            df.write.jdbc(url=postgres_url, table=table, mode="ignore", properties=properties) # change mode to ignore to test
+        except py4j.protocol.Py4JJavaError as e:
+            logging.error(e)
+        except Exception as e:
+            logging.error(e)
         
     def filter_load_dim_df(df, table, partitions, idx_col):
         """
         Function for filtering out existing rows in the dimension tables before updating the data.
         """
-        
         # Read table
         print(f'Reading {table}')
         existing_table = read_db(table)
         
         # Filter out existing ids
         print(f'Filtering rows from {table}')
-        non_existing_rows = df.join(existing_table, [idx_col, idx_col], "leftanti")
-        #existing_ids = existing_table.select(idx_col).collect()
-        #print(existing_ids)
-        #non_existing_rows = df.filter(~df[idx_col].isin(existing_ids))
+        non_existing_rows = df.join(existing_table, [idx_col], "leftanti")
         
         # Load rows with ids not present in the database
         print(f'Loading {table}')
         write_df(non_existing_rows, table, partitions)
-        
         print(f'Load for {table} done')
         
     def load_fact_df(df, table, partitions):
@@ -118,6 +121,7 @@ def load(job_timestamp):
     filter_load_dim_df(dim_date, 'dim_date', no_partitions, 'datekey')
     load_fact_df(fact_sale, 'fact_sale', no_partitions)
 
+    spark.stop()
 if __name__ == '__main__':
 	from datetime import datetime
 	load(datetime(2011, 1, 1, 0, 0, 0))

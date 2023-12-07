@@ -5,6 +5,7 @@ def transform(job_timestamp):
     """
     print('Transform starting')
     from pyspark.sql import SparkSession
+    import logging
     spark = SparkSession.builder.master("local[*]") \
                         .appName('Data ETL') \
                         .getOrCreate()
@@ -167,7 +168,7 @@ def transform(job_timestamp):
     df_py_date = df_py.withColumn("date", to_date(col("payment_date"), "yyyy-MM-dd"))
 
     dim_date = df_py_date.select('date').distinct()
-    dim_date = dim_date.withColumn('date_key', unix_timestamp('date').cast('long'))\
+    dim_date = dim_date.withColumn('datekey', unix_timestamp('date').cast('long'))\
                 .withColumn('year', year('date'))\
                 .withColumn('month', month('date'))\
                 .withColumn('day', dayofmonth('date'))\
@@ -195,6 +196,13 @@ def transform(job_timestamp):
     """
     )
     print('Data transformations complete')
+
+    #Checking that none of the dataframes are empty
+    dfs = ((dim_customer,'dim_customer'),(dim_film, 'dim_film'),(dim_store, 'dim_store'),(dim_date, 'dim_date'),(fact_sale, 'fact_sale'))
+    for df_ in dfs:
+        logging.error((f'Successfully created {df_[1]} dataframe'))
+        if df_[0].count() <= 1:
+            logging.error(f'Rows of {df_[1]} are <= 1')
 
     dim_customer.repartition(10).write.csv(f'./transformed_data/{job_timestamp}/dim_customer', mode='overwrite', header=True)
     dim_film.repartition(10).write.csv(f'./transformed_data/{job_timestamp}/dim_film', mode='overwrite', header=True)
