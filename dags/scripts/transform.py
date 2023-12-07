@@ -201,6 +201,8 @@ def transform(job_timestamp):
     dfs = ((dim_customer,'dim_customer'),(dim_film, 'dim_film'),(dim_store, 'dim_store'),(dim_date, 'dim_date'),(fact_sale, 'fact_sale'))
     for df_ in dfs:
         logging.error((f'Successfully created {df_[1]} dataframe'))
+        length = df_[0].count()
+        logging.error((f'{df_[1]} contains {df_[1]} rows'))
         if df_[0].count() <= 1:
             logging.error(f'Rows of {df_[1]} are <= 1')
 
