@@ -1,7 +1,5 @@
 # Folders
-logtest/
-testing_files/
-*.ipynb
+
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
