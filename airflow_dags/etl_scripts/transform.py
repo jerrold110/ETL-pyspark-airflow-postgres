@@ -2,6 +2,10 @@ def transform(job_timestamp):
     """
     Transform job
     
+    Reasons for writing the transformed data to persistent storage instead of passing between functions:
+    - Data persists after spark sessions ends, whether due to error or crash
+    - Decouples transform and load operations
+    - Persisting the data allows for parallel and distributed processing
     """
     print('Transform starting')
     from pyspark.sql import SparkSession

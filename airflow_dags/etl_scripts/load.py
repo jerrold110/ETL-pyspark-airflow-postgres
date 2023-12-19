@@ -1,10 +1,9 @@
 def load(job_timestamp):
     """
     Load job
-    Reasons for writing the transformed data to persistent storage instead of passing between functions:
-    - Data persists after spark sessions ends, whether due to error or crash
-    - Decouples transform and load operations
-    - Persisting the data allows for parallel and distributed processing
+    Writing to database is done with PostgreSQL JDBC Driver. Jar file is placed in /jars directory of $SPARK_HOME. Class is referenced with org.postgresql.Driver
+    After reading the data. Each dataframe is repartitioned into a number x, equal to the number of partitions in the database connector. 
+    Read and write isolation level is serializable
     """
     print('Load starting')
     import logging
