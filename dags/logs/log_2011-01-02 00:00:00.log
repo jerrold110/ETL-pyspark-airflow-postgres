@@ -1,4 +1,0 @@
-ERROR:root:Successfully created dim_customer dataframe
-ERROR:root:Rows of dim_customer are <= 1
-ERROR:root:Retrieving address2875yi4385.dat from S3
-ERROR:root:Error while retrieving address2875yi4385.dat from S3 An error occurred (404) when calling the HeadObject operation: Not Found
