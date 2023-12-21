@@ -1,9 +1,10 @@
 def load(job_timestamp):
     """
     Load job
-    Writing to database is done with PostgreSQL JDBC Driver. Jar file is placed in /jars directory of $SPARK_HOME. Class is referenced with org.postgresql.Driver
+    Writing to database is done with PostgreSQL JDBC Driver. Jar file is placed in /jars directory of $SPARK_HOME. Class is referenced with org.postgresql.Driver.
     After reading the data. Each dataframe is repartitioned into a number x, equal to the number of partitions in the database connector. 
     Read and write isolation level is serializable
+    Apparently referring to the local path of the JDBC driver .jar file in SparkSession isn't necessary to initiate a DB connection
     """
     print('Load starting')
     import logging
@@ -76,7 +77,7 @@ def load(job_timestamp):
         }
         try:
             logging.error(f'Writing dataframe to {table} table')
-            df.write.jdbc(url=postgres_url, table=table, mode="ignore", properties=properties) # change mode to ignore to test
+            df.write.jdbc(url=postgres_url, table=table, mode="append", properties=properties) # change mode to ignore to test
         except py4j.protocol.Py4JJavaError as e:
             logging.error(e)
         except Exception as e:
